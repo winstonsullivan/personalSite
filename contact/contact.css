@@ -1,0 +1,185 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+  background-color: black;
+  color: #FFF;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+  color: #FFF;
+  overflow: hidden;
+  align-items: center;
+}
+
+.site-header {
+  background-color: black;
+  color: #FFD700;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+.site-nav {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.site-nav li {
+  flex: 1;
+  text-align: center;
+}
+
+.site-nav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.site-nav a:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group label, .form-group input, .form-group textarea {
+  width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  padding: 15px;
+  border: 2px solid #FFD700;
+  border-radius: 5px;
+  background-color: #222;
+  color: #FFF;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border-color: #E4405F;
+  outline: none;
+}
+
+.form-group input[type="submit"] {
+  background-color: #FFD700;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #E6C200;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-group a {
+  flex: 1 0 21%; /* Adjusts to 4 per row */
+  margin: 5px;
+  padding: 10px 0; /* Uniform padding */
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.button-group a.email-button {
+  background-color: #4A90E2;
+}
+
+.button-group a.instagram-button {
+  background-color: #C13584; /* Instagram Purple Red tinyurl.com/y47arfa8 */ 
+}
+
+.button-group a.youtube-button {
+  background-color: #FF0000; /* YouTube Red */
+}
+
+.button-group a.soundcloud-button {
+  background-color: #FF5500; /* SoundCloud Orange */
+}
+
+.game-button:hover, .button-group a:hover {
+  opacity: 0.8;
+}
+
+.site-footer {
+  background-color: #000000;
+  color: #FFD700;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .button-group a {
+    flex: 1 0 46%; /* Adjusts to 2 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .button-group a {
+    flex: 1 0 96%; /* Adjusts to 1 per row */
+  }
+  .video-container video {
+    height: 200px;
+  }
+}
